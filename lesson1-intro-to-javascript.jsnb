@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "name": "Lesson 1: Introduction to JavaScript<br>",
+    "language_info": {
+      "name": "JavaScipt",
+      "version": "8.0"
+    }
+  },
+  "jsnbversion": "v0.1",
+  "cells": [
+    {
+      "code": "<div style=\"text-align:center;background-color:#fede02;color:#555;margin:-10px;margin-left:-20px;margin-right:-20px;\">\n\n        <br><h1  style=\"color:#555\">Learn Foundations of JavaScript in 10 Easy Lessons</h1>\n<p class=\"site-masthead__description mb-0\" style=\"color:#555\">\n        This is a course in foundations of JavaScript in 10 lessons with easy to use interactive workbooks.\n    </p><br></div>",
+      "status": "",
+      "output": "<div style=\"text-align:center;background-color:#fede02;color:#555;margin:-10px;margin-left:-20px;margin-right:-20px;\">\n\n        <br><h1 style=\"color:#555\">Learn Foundations of JavaScript in 10 Easy Lessons</h1>\n<p class=\"site-masthead__description mb-0\" style=\"color:#555\">\n        This is a course in foundations of JavaScript in 10 lessons with easy to use interactive workbooks.\n    </p><br></div>",
+      "type": "html"
+    },
+    {
+      "code": "<h1>Introduction to JavaScript: Lesson 1 of 10</h1>",
+      "status": "",
+      "output": "<h1>Introduction to JavaScript: Lesson 1 of 10</h1>",
+      "type": "html"
+    },
+    {
+      "code": "<h2> Overview</h2>\n\nWelcome to the world of JavaScript! In this lesson, we'll introduce the basics of JavaScript, its role in web development, and the environments where it can be executed. This text can be edited by double-clicking and clicking play button.\n\n<h3> What is JavaScript?</h3>\n\nJavaScript is a versatile programming language primarily used for creating interactive and dynamic content on websites. It allows you to manipulate and control the behavior of web pages, enhancing the overall user experience.\n<br>\nIn this lesson, we'll focus on understanding the basics of JavaScript within the browser environment. We will use Scribbler tool to experiment and learn JavaScript.",
+      "status": "",
+      "output": "<h2> Overview</h2>\n\nWelcome to the world of JavaScript! In this lesson, we'll introduce the basics of JavaScript, its role in web development, and the environments where it can be executed. This text can be edited by double-clicking and clicking play button.\n\n<h3> What is JavaScript?</h3>\n\nJavaScript is a versatile programming language primarily used for creating interactive and dynamic content on websites. It allows you to manipulate and control the behavior of web pages, enhancing the overall user experience.\n<br>\nIn this lesson, we'll focus on understanding the basics of JavaScript within the browser environment. We will use Scribbler tool to experiment and learn JavaScript.",
+      "type": "html"
+    },
+    {
+      "code": "<h2>Writing Simple JavaScript Code</h2>\n\nLet's start by writing and executing some basic JavaScript code. For this, we'll use the next cell. Please feel free to edit and run to experiment. Click the play button (►) after editing to see the output.\n<br>\n  Please note that scrib.show is a Scribbler function for showing an output in the cell. Whereas, console.log is a generic function across various JavaScript environments. The output of console.log is shown in the console of the environment (browser or terminal).",
+      "status": "",
+      "output": "<h2>Writing Simple JavaScript Code</h2>\n\nLet's start by writing and executing some basic JavaScript code. For this, we'll use the next cell. Please feel free to edit and run to experiment. Click the play button (►) after editing to see the output.\n<br>\n  Please note that scrib.show is a Scribbler function for showing an output in the cell. Whereas, console.log is a generic function across various JavaScript environments. The output of console.log is shown in the console of the environment (browser or terminal).",
+      "type": "html"
+    },
+    {
+      "code": "// Welcome message\nlet greeting = \"Hello, Scribbler!\";\n// console.log(greeting); //This is a standard JavaScript method that output the above message to the log of the Browser. \nscrib.show(greeting); //This is a Scribbler specific function that shows the result below\n",
+      "status": "[2]<br><span style=\"font-size:8px\">2ms<span></span></span>",
+      "output": "Hello, Scribbler! <br>",
+      "type": "code"
+    },
+    {
+      "code": "Let's now look at how to do a basic arithmetic cacluation. \n<br>Please feel free to edit and run to experiment. Click the play button (►) after editing to see the output.",
+      "status": "",
+      "output": "Let's now look at how to do a basic arithmetic cacluation. \n<br>Please feel free to edit and run to experiment. Click the play button (►) after editing to see the output.",
+      "type": "html"
+    },
+    {
+      "code": "// Basic arithmetic\nlet num1 = 10;\nlet num2 = 5;\nlet sum = num1 + num2;\nconsole.log(\"Sum:\", sum);\nscrib.show(\"Sum:\",sum)\nscrib.show(\"Division:\", num1/num2);\nscrib.show(\"Multiply:\", num1 * num2);",
+      "status": "[5]<br><span style=\"font-size:8px\">2ms<span></span></span>",
+      "output": "Sum: 15 <br>Division: 2 <br>Multiply: 50 <br>",
+      "type": "code"
+    },
+    {
+      "code": "<h2>Explanation</h2>\nIn the first example above, we declare a variable <i>greeting</i> and use <i>console.log</i>  to display a welcome message. \nIn the second example, we perform basic arithmetic operation with variables <i>num1</i> and <i>num2</i>, calculating their sum. \n<h3>console.log in JavaScript</h3>\nIn JavaScript, console.log is a method used to print messages, variables, or any information to the browser's console. The console is a developer tool that allows you to see output, debug code, and inspect the runtime behavior of your JavaScript programs. If you are running JavaScript in a browser environment (like Chrome, Firefox, Edge, or Safari), you can open the browser's developer tools. To do this:\n<ol>\n<li>  Right-click on the page and select \"Inspect Element\" or press Ctrl + Shift + I (Windows/Linux) or Cmd + Opt + I (Mac) to open the Developer Tools.</li>\n<li>Go to the \"Console\" tab within the Developer Tools.</li>\n</ol>\n<h3>show() Function</h3>\nInstead of seeing the message in the log, Scribbler also provides a function <i>show</i> to see the output immediately. Note that <i>show</i> is not a generic JavaScript function and is a feature of Scribbler. Most JavaScript environments including Browsers and node.js will have console.log.\n",
+      "status": "",
+      "output": "<h2>Explanation</h2>\nIn the first example above, we declare a variable <i>greeting</i> and use <i>console.log</i>  to display a welcome message. \nIn the second example, we perform basic arithmetic operation with variables <i>num1</i> and <i>num2</i>, calculating their sum. \n<h3>console.log in JavaScript</h3>\nIn JavaScript, console.log is a method used to print messages, variables, or any information to the browser's console. The console is a developer tool that allows you to see output, debug code, and inspect the runtime behavior of your JavaScript programs. If you are running JavaScript in a browser environment (like Chrome, Firefox, Edge, or Safari), you can open the browser's developer tools. To do this:\n<ol>\n<li>  Right-click on the page and select \"Inspect Element\" or press Ctrl + Shift + I (Windows/Linux) or Cmd + Opt + I (Mac) to open the Developer Tools.</li>\n<li>Go to the \"Console\" tab within the Developer Tools.</li>\n</ol>\n<h3>show() Function</h3>\nInstead of seeing the message in the log, Scribbler also provides a function <i>show</i> to see the output immediately. Note that <i>show</i> is not a generic JavaScript function and is a feature of Scribbler. Most JavaScript environments including Browsers and node.js will have console.log.\n",
+      "type": "html"
+    },
+    {
+      "code": "<h2>Experiment</h2>\nIn the next cell we have a snippet of a code. It does not work as expected. Can you modify it to say hello to you?\n  <br> Please note strings like names etc. can be in double quotes (like \"Scribbler\") or single quotes (like 'Scribbler'). Click the play button (►) after editing to see the output (you can also press Cmd/Cntrl-Enter).",
+      "status": "",
+      "output": "<h2>Experiment</h2>\nIn the next cell we have a snippet of a code. It does not work as expected. Can you modify it to say hello to you?\n  <br> Please note strings like names etc. can be in double quotes (like \"Scribbler\") or single quotes (like 'Scribbler'). Click the play button (►) after editing to see the output (you can also press Cmd/Cntrl-Enter).",
+      "type": "html"
+    },
+    {
+      "code": "let myName = 'Jack';\nconsole.log(\"Hello!\",myName);\nscrib.show(\"Hello!\",myName);",
+      "status": "[1]<br><span style=\"font-size:8px\">3ms<span></span></span>",
+      "output": "Hello! Jack <br>",
+      "type": "code"
+    },
+    {
+      "code": "In the next can you add code to show the porduct of `x` and `y`? Click the play button (►) after editing to see the output (you can also press Cmd/Cntrl-Enter).",
+      "status": "",
+      "output": "In the next can you add code to show the porduct of `x` and `y`? Click the play button (►) after editing to see the output (you can also press Cmd/Cntrl-Enter).",
+      "type": "html"
+    },
+    {
+      "code": "let x=1;\nlet y=2;\n\n//Write code here\nproduct = x * y\nscrib.show(\"Product of the numbers is:\",product)",
+      "status": "[2]<br><span style=\"font-size:8px\">1ms<span></span></span>",
+      "output": "Product of the numbers is: 2 <br>",
+      "type": "code"
+    },
+    {
+      "code": "<h2>Some Fundamental Points</h2>\n<h3>Curly Brackets '{}'</h3>\nIn JavaScript, curly brackets {} are used to define blocks of code. A block is a collection of statements grouped together. It is important to note that code inside curly brackets forms a block scope. Remember to always close a bracket at the end of the block.\n<pre>\n  function exampleFunction() {\n  // Start of block\n  let variableInsideBlock = \"I am inside the block\";\n  // End of block\n}\n// variableInsideBlock is not accessible here\n</pre>\n<h3>Comments</h3>\nComments in JavaScript are used to provide explanatory notes within the code. Single-line comments start with //, and multi-line comments are enclosed between /* and */.\n  <pre>\n\t// This is a single-line comment\n\n/*\n  This is a multi-line comment\n  spanning multiple lines\n*/\n\n\t</pre>\n<h3>Case Sensitivity</h3>\nJavaScript is case-sensitive. This means that variableName and VariableName are treated as different variables.\n<h3>Semicolons ';'</h3>\nSemicolons are used to terminate statements in JavaScript. While they are optional in some cases, including them is considered good practice.\n<h3>Variables</h3>\nVariables are used to store and manage data. Declare variables using <i>var</i>,<i> let</i>, or <i>const</i>. Use const for values that won't change and let for variables that may be reassigned.\n<h3>Data Types</h3>\nJavaScript has dynamic typing, allowing variables to hold values of any data type. Common data types include string, number, boolean, object, null, and undefined. More about this in the next lesson.\n\n",
+      "status": "",
+      "output": "<h2>Some Fundamental Points</h2>\n<h3>Curly Brackets '{}'</h3>\nIn JavaScript, curly brackets {} are used to define blocks of code. A block is a collection of statements grouped together. It is important to note that code inside curly brackets forms a block scope. Remember to always close a bracket at the end of the block.\n<pre>  function exampleFunction() {\n  // Start of block\n  let variableInsideBlock = \"I am inside the block\";\n  // End of block\n}\n// variableInsideBlock is not accessible here\n</pre>\n<h3>Comments</h3>\nComments in JavaScript are used to provide explanatory notes within the code. Single-line comments start with //, and multi-line comments are enclosed between /* and */.\n  <pre>    // This is a single-line comment\n\n<p>/*\n  This is a multi-line comment\n  spanning multiple lines\n*/</p>\n<pre><code>&lt;/pre&gt;\n</code></pre>\n<h3>Case Sensitivity</h3>\nJavaScript is case-sensitive. This means that variableName and VariableName are treated as different variables.\n<h3>Semicolons ';'</h3>\nSemicolons are used to terminate statements in JavaScript. While they are optional in some cases, including them is considered good practice.\n<h3>Variables</h3>\nVariables are used to store and manage data. Declare variables using <i>var</i>,<i> let</i>, or <i>const</i>. Use const for values that won't change and let for variables that may be reassigned.\n<h3>Data Types</h3>\nJavaScript has dynamic typing, allowing variables to hold values of any data type. Common data types include string, number, boolean, object, null, and undefined. More about this in the next lesson.\n\n</pre>",
+      "type": "html"
+    },
+    {
+      "code": "<h2>Experiment</h2>\nEach of the next few cells has an error. Check the code and modify so that the total of <i>x</i> and <i>y</i> is shown.",
+      "status": "",
+      "output": "<h2>Experiment</h2>\nEach of the next few cells has an error. Check the code and modify so that the total of <i>x</i> and <i>y</i> is shown.",
+      "type": "html"
+    },
+    {
+      "code": "\nlet x=1;\nlet y=2;\nlet total=x+y;\nscrib.show(total)",
+      "status": "[3]<br><span style=\"font-size:8px\">2ms<span></span></span>",
+      "output": "3 <br>",
+      "type": "code"
+    },
+    {
+      "code": "// variable names are case-sensitive\nlet x=1;\nlet y=2;\nlet total=x+y;\nscrib.show(total);",
+      "status": "[-]",
+      "output": "<p class=\"error\">Total is not defined</p>",
+      "type": "code"
+    },
+    {
+      "code": "let x=1;\nlet y=2;\n//let total=x+y;\nscrib.show(total);",
+      "status": "[-]",
+      "output": "<p class=\"error\">total is not defined</p>",
+      "type": "code"
+    },
+    {
+      "code": "\n<h2>Execution Environments</h2>\n\nJavaScript can be executed in different environments, with the two main ones being Browser and server. It's essential to distinguish between the browser and Node.js environments:\n<ol>\n<li> <b>Browser Environment:</b> JavaScript is commonly used in web browsers to enhance the functionality of web pages. It can interact with HTML and CSS to create dynamic and responsive user interfaces. To access this environment there is no need to install anything other than a web-brower.</li>\n  <li><b>Node.js Environment (node.js):</b>  JavaScript can also be executed outside of the browser using several server side enrivornments, most popular of them being <a href='https://nodejs.org/en/learn/getting-started/introduction-to-nodejs'>Node.js</a>. This environment enables JavaScript to be used for server-side development, allowing you to build scalable and efficient web applications. </li>\n\t</ol>\n",
+      "status": "",
+      "output": "\n<h2>Execution Environments</h2>\n\nJavaScript can be executed in different environments, with the two main ones being Browser and server. It's essential to distinguish between the browser and Node.js environments:\n<ol>\n<li> <b>Browser Environment:</b> JavaScript is commonly used in web browsers to enhance the functionality of web pages. It can interact with HTML and CSS to create dynamic and responsive user interfaces. To access this environment there is no need to install anything other than a web-brower.</li>\n  <li><b>Node.js Environment (node.js):</b>  JavaScript can also be executed outside of the browser using several server side enrivornments, most popular of them being <a href=\"https://nodejs.org/en/learn/getting-started/introduction-to-nodejs\">Node.js</a>. This environment enables JavaScript to be used for server-side development, allowing you to build scalable and efficient web applications. </li>\n\t</ol>\n",
+      "type": "html"
+    },
+    {
+      "code": "<h2>Learn More</h2>\n<ul>\n  <li><a href=\"https://app.scribbler.live#\" target=\"_blank\">Blank Notebook for Experimentation</a></li>\n  <li><a href=\"https://scribbler.live/learn\" target=\"_blank\">Back to Course Contents</a></li>\n<li><a href=\"https://app.scribbler.live/?jsnb=https://scribbler.live/learn/intro-lesson-2.jsnb\" target=\"_blank\">Lesson 2: Variables and Data Types</a></li>\n  <li><a href=\"https://app.scribbler.live/?jsnb=https://scribbler.live/learn/intro-lesson-3.jsnb\" target=\"_blank\">Lesson 3: Functions for Modular Code</a></li>\n  \n  </ul>",
+      "status": "",
+      "output": "<h2>Learn More</h2>\n<ul>\n  <li><a href=\"https://app.scribbler.live#\" target=\"_blank\">Blank Notebook for Experimentation</a></li>\n  <li><a href=\"https://scribbler.live/learn\" target=\"_blank\">Back to Course Contents</a></li>\n<li><a href=\"https://app.scribbler.live/?jsnb=https://scribbler.live/learn/intro-lesson-2.jsnb\" target=\"_blank\">Lesson 2: Variables and Data Types</a></li>\n  <li><a href=\"https://app.scribbler.live/?jsnb=https://scribbler.live/learn/intro-lesson-3.jsnb\" target=\"_blank\">Lesson 3: Functions for Modular Code</a></li>\n  \n  </ul>",
+      "type": "html"
+    }
+  ],
+  "source": "https://github.com/gopi-suvanam/scribbler",
+  "run_on_load": false
+}

@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "name": "Javascript-notes-full-Jack",
+    "language_info": {
+      "name": "JavaScipt",
+      "version": "8.0"
+    }
+  },
+  "jsnbversion": "v0.1",
+  "cells": [
+    {
+      "code": "",
+      "status": "[3]<br><span style=\"font-size:8px\">6ms<span></span></span>",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "<h1>My Javascript Notes in Scribble </h1>\n\n<h1>Scribble.live shortcut:</h1>\n<pre>\n  - Alt + D: move current cells down;\n  - Shift + Enter: activate next cell below;\n  - command + Enter: Run current cell;\n  \n</pre>\n\n<h1> Chapter 1 Variables and DataTypes</h1>",
+      "status": "",
+      "output": "<h1>My Javascript Notes in Scribble </h1>\n\n<h1>Scribble.live shortcut:</h1>\n<pre>  - Alt + D: move current cells down;\n  - Shift + Enter: activate next cell below;\n  - command + Enter: Run current cell;\n  \n<p></p></pre><p></p>\n<h1> Chapter 1 Variables and DataTypes</h1>",
+      "type": "html"
+    },
+    {
+      "code": "prefer use `let` and `const` to define variables",
+      "status": "",
+      "output": "<p>prefer use <code>let</code> and <code>const</code> to define variables</p>\n",
+      "type": "html"
+    },
+    {
+      "code": "let message = \"Hello, Jack\";\nconsole.log(message);\nscrib.show(message);",
+      "status": "[2]<br><span style=\"font-size:8px\">4ms<span></span></span>",
+      "output": "Hello, Jack <br>",
+      "type": "code"
+    },
+    {
+      "code": "<H2> Data types</h2>\n<ul>\n  <li> String</li>\n  <li> Number</li>\n  <li> Boolean</li>\n  <li> Undefined</li>\n  <li> Null</li>\n</ul>",
+      "status": "",
+      "output": "<h2> Data types</h2>\n<ul>\n  <li> String</li>\n  <li> Number</li>\n  <li> Boolean</li>\n  <li> Undefined</li>\n  <li> Null</li>\n</ul>",
+      "type": "html"
+    },
+    {
+      "code": "\nlet num = 3;\nlet myStr = \"Jack\";\nlet isUser = true;\nlet myName;\nlet myNull = null;\n\nscrib.show(`Type of ${num}: ${typeof num}`);\nscrib.show(`Type of ${myStr}: ${typeof myStr}`);\nscrib.show(`Type of ${isUser}: ${typeof isUser}`);\nscrib.show(`Type of ${myName}: ${typeof myName}`);\nscrib.show(`Type of ${myNull}: ${typeof myNull}`);\n",
+      "status": "[12]<br><span style=\"font-size:8px\">2ms<span></span></span>",
+      "output": "Type of 3: number <br>Type of Jack: string <br>Type of true: boolean <br>Type of undefined: undefined <br>Type of null: object <br>",
+      "type": "code"
+    },
+    {
+      "code": "<h2> basic variable operations </h2>\n",
+      "status": "",
+      "output": "<h2> basic variable operations </h2>\n",
+      "type": "html"
+    },
+    {
+      "code": "//>md\n\n| data types | Operators                                                    |\n| ---------- | ------------------------------------------------------------ |\n| String     | +(concatenation)                                             |\n| Numbers    | +(add), -(subtract), *(multiply), /(divide), %(module)       |\n| Comparison | ==(equality), strict equality(===),!=(inequality), <(less than),<=(less than or equal to), >(greater than), >=(greater than or equal to)  |\n| Boolean    | &&(and), \\|\\|(or), !(not)                                    |\n\n",
+      "status": "",
+      "output": "<table>\n<thead>\n<tr>\n<th>data types</th>\n<th>Operators</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>String</td>\n<td>+(concatenation)</td>\n</tr>\n<tr>\n<td>Numbers</td>\n<td>+(add), -(subtract), *(multiply), /(divide), %(module)</td>\n</tr>\n<tr>\n<td>Comparison</td>\n<td>==(equality), strict equality(===),!=(inequality), &lt;(less than),&lt;=(less than or equal to), &gt;(greater than), &gt;=(greater than or equal to)</td>\n</tr>\n<tr>\n<td>Boolean</td>\n<td>&amp;&amp;(and), ||(or), !(not)</td>\n</tr>\n</tbody></table>\n",
+      "type": "html"
+    },
+    {
+      "code": "// string concatenation\nlet firstName = \"Jack\";\nlet lastName = \"Cheng\";\nscrib.show(firstName, \" \" ,lastName);\nscrib.show(firstName + \" \" + lastName);",
+      "status": "[15]<br><span style=\"font-size:8px\">3ms<span></span></span>",
+      "output": "Jack   Cheng <br>Jack Cheng <br>",
+      "type": "code"
+    },
+    {
+      "code": "// Mathmetical Operations\nlet num1 = 10;\nlet num2 = 5;\nscrib.show(\"Sum:\", num1 + num2);\nscrib.show(\"Subtract\", num1 - num2);\nscrib.show(\"Division:\", num1 / num2);\nscrib.show(\"Multiply:\", num1 * num2);",
+      "status": "[16]<br><span style=\"font-size:8px\">1ms<span></span></span>",
+      "output": "Sum: 15 <br>Subtract 5 <br>Division: 2 <br>Multiply: 50 <br>",
+      "type": "code"
+    }
+  ],
+  "source": "https://github.com/gopi-suvanam/scribbler",
+  "run_on_load": false
+}

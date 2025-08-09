@@ -9,15 +9,15 @@
   "jsnbversion": "v0.1",
   "cells": [
     {
-      "code": "",
-      "status": "[3]<br><span style=\"font-size:8px\">6ms<span></span></span>",
-      "output": "",
-      "type": "code"
+      "code": "<h1>My Javascript Notes in Scribble </h1>",
+      "status": "",
+      "output": "<h1>My Javascript Notes in Scribble </h1>",
+      "type": "html"
     },
     {
-      "code": "<h1>My Javascript Notes in Scribble </h1>\n\n<h1>Scribble.live shortcut:</h1>\n<pre>\n  - Alt + D: move current cells down;\n  - Shift + Enter: activate next cell below;\n  - command + Enter: Run current cell;\n  \n</pre>\n\n<h1> Chapter 1 Variables and DataTypes</h1>",
+      "code": "\n<h1>Scribble.live shortcut:</h1>\n<pre>\n  - Alt + D: move current cells down;\n  - Shift + Enter: activate next cell below;\n  - Option + Enter: create new cell below;\n  - command + Enter: Run current cell;\n  - Command + M: Toggle btw Doc and Code mode;\n\n</pre>\n\n<h1> Chapter 1 Variables and DataTypes</h1>",
       "status": "",
-      "output": "<h1>My Javascript Notes in Scribble </h1>\n\n<h1>Scribble.live shortcut:</h1>\n<pre>  - Alt + D: move current cells down;\n  - Shift + Enter: activate next cell below;\n  - command + Enter: Run current cell;\n  \n<p></p></pre><p></p>\n<h1> Chapter 1 Variables and DataTypes</h1>",
+      "output": "<h1>Scribble.live shortcut:</h1>\n<pre>  - Alt + D: move current cells down;\n  - Shift + Enter: activate next cell below;\n  - Option + Enter: create new cell below;\n  - command + Enter: Run current cell;\n  - Command + M: Toggle btw Doc and Code mode;\n\n<p></p></pre><p></p>\n<h1> Chapter 1 Variables and DataTypes</h1>",
       "type": "html"
     },
     {
@@ -33,9 +33,9 @@
       "type": "code"
     },
     {
-      "code": "<H2> Data types</h2>\n<ul>\n  <li> String</li>\n  <li> Number</li>\n  <li> Boolean</li>\n  <li> Undefined</li>\n  <li> Null</li>\n</ul>",
+      "code": "<H2>1.1 Data types</h2>\n<ul>\n  <li> String</li>\n  <li> Number</li>\n  <li> Boolean</li>\n  <li> Undefined</li>\n  <li> Null</li>\n</ul>",
       "status": "",
-      "output": "<h2> Data types</h2>\n<ul>\n  <li> String</li>\n  <li> Number</li>\n  <li> Boolean</li>\n  <li> Undefined</li>\n  <li> Null</li>\n</ul>",
+      "output": "<h2>1.1 Data types</h2>\n<ul>\n  <li> String</li>\n  <li> Number</li>\n  <li> Boolean</li>\n  <li> Undefined</li>\n  <li> Null</li>\n</ul>",
       "type": "html"
     },
     {
@@ -45,9 +45,9 @@
       "type": "code"
     },
     {
-      "code": "<h2> basic variable operations </h2>\n",
+      "code": "<h2>1.2 basic variable operations </h2>\n",
       "status": "",
-      "output": "<h2> basic variable operations </h2>\n",
+      "output": "<h2>1.2 basic variable operations </h2>\n",
       "type": "html"
     },
     {
@@ -64,8 +64,68 @@
     },
     {
       "code": "// Mathmetical Operations\nlet num1 = 10;\nlet num2 = 5;\nscrib.show(\"Sum:\", num1 + num2);\nscrib.show(\"Subtract\", num1 - num2);\nscrib.show(\"Division:\", num1 / num2);\nscrib.show(\"Multiply:\", num1 * num2);",
-      "status": "[16]<br><span style=\"font-size:8px\">1ms<span></span></span>",
+      "status": "[1]<br><span style=\"font-size:8px\">4ms<span></span></span>",
       "output": "Sum: 15 <br>Subtract 5 <br>Division: 2 <br>Multiply: 50 <br>",
+      "type": "code"
+    },
+    {
+      "code": "//>md\n## 1.3 Comparison Operations\n\nfor more information about operations, refer to [mdn doc](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)\n\n",
+      "status": "",
+      "output": "<h2>1.3 Comparison Operations</h2>\n<p>for more information about operations, refer to <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators\">mdn doc</a></p>\n",
+      "type": "html"
+    },
+    {
+      "code": "let x = 10;\nlet y = 15;\nlet a = 10;\nlet b = \"10\";\nscrib.show(\"Is x greater than y:\", x > y);\nscrib.show(\"IS x less than y:\", x < y);\nscrib.show(\"Is x equal to y:\", x==y); // better use strict equal\nscrib.show(\"Is x strict equal to y:\", x===y);\nscrib.show(\"Is a equal to b:\", a==b); // 如果不用 strict equal, a 和 b 一个是 Number，一个是 string，也会相等\nscrib.show(\"Is a strict equal to b:\", a===b);",
+      "status": "[12]<br><span style=\"font-size:8px\">7ms<span></span></span>",
+      "output": "Is x greater than y: false <br>IS x less than y: true <br>Is x equal to y: false <br>Is x strict equal to y: false <br>Is a equal to b: true <br>Is a strict equal to b: false <br>",
+      "type": "code"
+    },
+    {
+      "code": "//>md\n## 1.4 boolean operations",
+      "status": "",
+      "output": "<h2>1.4 boolean operations</h2>\n",
+      "type": "html"
+    },
+    {
+      "code": "scrib.show(`true && true: `, true && true); // true\nscrib.show(`true && false: `, true && false); // false\nscrib.show(`false && false: `, false && false); // false\nscrib.show(`true || true: `, true || true); // true\nscrib.show(`true || false: `, true || false); // true\nscrib.show(`false || false: `, false || false); // false\nscrib.show(`!true: `, !true); // false\nscrib.show(`!false: `, !false); // true",
+      "status": "[15]<br><span style=\"font-size:8px\">2ms<span></span></span>",
+      "output": "true &amp;&amp; true:  true <br>true &amp;&amp; false:  false <br>false &amp;&amp; false:  false <br>true || true:  true <br>true || false:  true <br>false || false:  false <br>!true:  false <br>!false:  true <br>",
+      "type": "code"
+    },
+    {
+      "code": "//>md\n## 1.5 let and const\n\n`let` is block-scoped, meaning it’s only accessible within the { ... } block, statement, or expression where it was declared.\n\n`const` is also block-scoped.\n\n`var` is function-scoped — meaning it’s accessible throughout the entire function in which it’s declared, or globally if declared outside any function.\n\n> Caution: use `let` to define variables whenever possible.",
+      "status": "",
+      "output": "<h2>1.5 let and const</h2>\n<p><code>let</code> is block-scoped, meaning it’s only accessible within the { ... } block, statement, or expression where it was declared.</p>\n<p><code>const</code> is also block-scoped.</p>\n<p><code>var</code> is function-scoped — meaning it’s accessible throughout the entire function in which it’s declared, or globally if declared outside any function.</p>\n<blockquote>\n<p>Caution: use <code>let</code> to define variables whenever possible.</p>\n</blockquote>\n",
+      "type": "html"
+    },
+    {
+      "code": "{\n  let y = 1;\n}\nscrib.show(y);",
+      "status": "[-]",
+      "output": "<p class=\"error\">y is not defined</p>",
+      "type": "code"
+    },
+    {
+      "code": "// block can be nested.\nlet x = 100;\n{\n  let x = 1;\n  {\n    let x = 2;\n\tscrib.show(\"x=\", x); // inner block can have access to value defined in outer block;\n  }\n  scrib.show(\"x=\", x);\n\n}\nscrib.show(\"x=\", x);",
+      "status": "[11]<br><span style=\"font-size:8px\">4ms<span></span></span>",
+      "output": "x= 2 <br>x= 1 <br>x= 100 <br>",
+      "type": "code"
+    },
+    {
+      "code": "const pi = 3.14;\npi = 3.1415926; // will show an error: Assignment to constant variable.",
+      "status": "[-]",
+      "output": "<p class=\"error\">Assignment to constant variable.</p>",
+      "type": "code"
+    },
+    {
+      "code": "//>md\n## Chapter 2. Control Flow and Conditional Statements.",
+      "status": "",
+      "output": "<h2>Chapter 2. Control Flow and Conditional Statements.</h2>\n",
+      "type": "html"
+    },
+    {
+      "code": "",
+      "status": "",
+      "output": "",
       "type": "code"
     }
   ],

@@ -15,9 +15,9 @@
       "type": "html"
     },
     {
-      "code": "\n<h1>Scribble.live shortcut:</h1>\n<pre>\n  - Alt + D: move current cells down;\n  - Shift + Enter: activate next cell below;\n  - Option + Enter: create new cell below;\n  - command + Enter: Run current cell;\n  - Command + M: Toggle btw Doc and Code mode;\n\n</pre>\n\n<h1> Chapter 1 Variables and DataTypes</h1>",
+      "code": "\n<h1>Scribble.live shortcut:</h1>\n<pre>\n  - Alt + D: move current cells down;\n  - Shift + Enter: activate next cell below;\n  - Option + Enter: create new cell below;\n  - command + Enter: Run current cell;\n  - Control + M: Toggle btw Doc and Code mode;\n\n</pre>\n\n<h1> Chapter 1 Variables and DataTypes</h1>",
       "status": "",
-      "output": "<h1>Scribble.live shortcut:</h1>\n<pre>  - Alt + D: move current cells down;\n  - Shift + Enter: activate next cell below;\n  - Option + Enter: create new cell below;\n  - command + Enter: Run current cell;\n  - Command + M: Toggle btw Doc and Code mode;\n\n<p></p></pre><p></p>\n<h1> Chapter 1 Variables and DataTypes</h1>",
+      "output": "<h1>Scribble.live shortcut:</h1>\n<pre>  - Alt + D: move current cells down;\n  - Shift + Enter: activate next cell below;\n  - Option + Enter: create new cell below;\n  - command + Enter: Run current cell;\n  - Control + M: Toggle btw Doc and Code mode;\n\n<p></p></pre><p></p>\n<h1> Chapter 1 Variables and DataTypes</h1>",
       "type": "html"
     },
     {
@@ -123,9 +123,21 @@
       "type": "html"
     },
     {
-      "code": "",
+      "code": "## 2.1 if statement\n\nsyntax:\n```\nif (condition) {\n  // Code to be executed if the conditon is true\n} else {\n  // Code to be executed if the condition is false\n}\n\n```",
       "status": "",
-      "output": "",
+      "output": "<h2>2.1 if statement</h2>\n<p>syntax:</p>\n<pre><code>if (condition) {\n  // Code to be executed if the conditon is true\n} else {\n  // Code to be executed if the condition is false\n}\n</code></pre>\n",
+      "type": "html"
+    },
+    {
+      "code": "let temp = 25;\n\nif (temp > 30){\n  scrib.show(\"It's a hot day.\");\n} else {\n  scrib.show(\"It's a cool day.\");\n}",
+      "status": "[18]<br><span style=\"font-size:8px\">3ms<span></span></span>",
+      "output": "It's a cool day. <br>",
+      "type": "code"
+    },
+    {
+      "code": "// mutiple conditions\n\nlet temp = 35;\n\nfunction checkWeather(temp){\n  if (temp > 30) {\n\tscrib.show(\"It's hot.\");\n  } else if (temp > 15) {\n\tscrib.show(\"It's comfortable\");\n  } else {\n\tscrib.show(\"It's cool.\");\n  };\n}\n\ntemps = [-20, 0, 20, 25, 30, 35];\ntemps.forEach((temp) => {\n  scrib.show(`Temp is  `+ temp+ \": \");\n  checkWeather(temp);\n})",
+      "status": "[24]<br><span style=\"font-size:8px\">3ms<span></span></span>",
+      "output": "Temp is  -20:  <br>It's cool. <br>Temp is  0:  <br>It's cool. <br>Temp is  20:  <br>It's comfortable <br>Temp is  25:  <br>It's comfortable <br>Temp is  30:  <br>It's comfortable <br>Temp is  35:  <br>It's hot. <br>",
       "type": "code"
     }
   ],

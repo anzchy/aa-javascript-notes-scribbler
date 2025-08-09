@@ -117,7 +117,7 @@
       "type": "code"
     },
     {
-      "code": "//>md\n## Chapter 2. Control Flow and Conditional Statements.",
+      "code": "//>md\n# Chapter 2. Control Flow and Conditional Statements.",
       "status": "",
       "output": "<h2>Chapter 2. Control Flow and Conditional Statements.</h2>\n",
       "type": "html"
@@ -138,6 +138,78 @@
       "code": "// mutiple conditions\n\nlet temp = 35;\n\nfunction checkWeather(temp){\n  if (temp > 30) {\n\tscrib.show(\"It's hot.\");\n  } else if (temp > 15) {\n\tscrib.show(\"It's comfortable\");\n  } else {\n\tscrib.show(\"It's cool.\");\n  };\n}\n\ntemps = [-20, 0, 20, 25, 30, 35];\ntemps.forEach((temp) => {\n  scrib.show(`Temp is  `+ temp+ \": \");\n  checkWeather(temp);\n})",
       "status": "[24]<br><span style=\"font-size:8px\">3ms<span></span></span>",
       "output": "Temp is  -20:  <br>It's cool. <br>Temp is  0:  <br>It's cool. <br>Temp is  20:  <br>It's comfortable <br>Temp is  25:  <br>It's comfortable <br>Temp is  30:  <br>It's comfortable <br>Temp is  35:  <br>It's hot. <br>",
+      "type": "code"
+    },
+    {
+      "code": "//>md\n## 2.2 for statement",
+      "status": "",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "",
+      "status": "",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "//>md\n### 2.2.1 for...of statement\n针对 iterable objects. 类似于 Python 中的 for...in statement",
+      "status": "",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "// 抓取网页中的表格，以天眼查为例：https://www.tianyancha.com/company/3204659571\n\n// 1. 选择表格行\nconst rows = document.querySelectorAll('.table-wrap.expand-table-wrap tbody tr');\n\n// 2. 定义表头字段（按你的表格列顺序来改）\nconst FIELDS = [\"序号\", \"股东名称\", \"持股比例\", \"认缴出资金额\", \"认缴出资日期\", \"间接持股比例\", \"首次持股日期\", \"机构简称\"];\n\n// 3. 提取数据\nconst records = Array.from(rows, row => {\n  const cells = Array.from(row.cells, c => c.textContent.trim());\n  const obj = {};\n  FIELDS.forEach((key, idx) => {\n\t// 如果该列不存在，填 null；注意这里左边是用 fileds的名字来作为 key，右边是用 cells中的对应 cells[0]来提取序号，cells[1]代表股东名称\n    obj[key] = cells[idx] ?? null; \n  });\n  return obj;\n});\n\n// 4. 转成 JSON 字符串（带缩进）\nconst jsonString = JSON.stringify(records, null, 2);\n\n// 5. 导出 JSON 文件（浏览器环境）\nconst blob = new Blob([jsonString], { type: 'application/json' });\nconst url = URL.createObjectURL(blob);\nconst a = document.createElement('a');\na.href = url;\na.download = 'table_data.json'; // 导出的文件名\ndocument.body.appendChild(a);\na.click();\ndocument.body.removeChild(a);\nURL.revokeObjectURL(url);\n\nconsole.log(`已导出 ${records.length} 条记录到 table_data.json`);\n\n",
+      "status": "",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "//>md\n### 2.2.2 for...in statement",
+      "status": "",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "//>md\n## 2.3 while statement",
+      "status": "",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "//>md\n# 3 function",
+      "status": "",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "//>md\n## 3.1 arrow function\n\ndifferent ways to write arrow functions.",
+      "status": "",
+      "output": "",
+      "type": "html"
+    },
+    {
+      "code": "//>md\n\n# 5. Global object",
+      "status": "",
+      "output": "<h1>5. Global object</h1>\n",
+      "type": "html"
+    },
+    {
+      "code": "//>md\n## 5.1 Array",
+      "status": "",
+      "output": "<h2>5.1 Array</h2>\n",
+      "type": "html"
+    },
+    {
+      "code": "Array.from() method, refer to [MDN doc](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)",
+      "status": "",
+      "output": "<p>Array.from() method, refer to <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from\">MDN doc</a></p>\n",
+      "type": "html"
+    },
+    {
+      "code": "// Using an arrow function as the map function to\n// manipulate the elements\nArray.from([1, 2, 3], (x) => x + x);\n// [2, 4, 6]\n\n// Generate a sequence of numbers\n// Since the array is initialized with `undefined` on each position,\n// the value of `v` below will be `undefined`\nArray.from({ length: 5 }, (v, i) => i);\n// [0, 1, 2, 3, 4]\n",
+      "status": "",
+      "output": "",
       "type": "code"
     }
   ],

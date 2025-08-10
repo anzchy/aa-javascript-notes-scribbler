@@ -159,37 +159,7 @@
       "type": "html"
     },
     {
-      "code": "## Project practice: scraping a real [website](http://books.toscrape.com/)",
-      "status": "",
-      "output": "<h2>Project practice: scraping a real <a href=\"http://books.toscrape.com/\">website</a></h2>\n",
-      "type": "html"
-    },
-    {
-      "code": "// First way to scrape the website, use for...each\nconst bookElements = document.querySelectorAll('.product_pod');\nbooks = [];\none_book = {};\nfor (let book of bookElements) {\n  const title = book.querySelector('h3 a').getAttribute('title').trim();\n  const price = book.querySelector('.price_color')?.textContent.trim() || \"\";\n  const stock = book.querySelector('.instock.availability')?.textContent.trim() || \"\";\n  one_book['title'] = title;\n  one_book['price'] = price;\n  one_book['stock'] = stock;\n  books.push(one_book);\n\n}\nconsole.log(books);\n",
-      "status": "",
-      "output": "",
-      "type": "code"
-    },
-    {
-      "code": "// Second way to scrape the website, use Array.from method + arrow function\n\nconst bookElements = document.querySelectorAll('.product_pod');\n\n// Use Array.from method\nconst books = Array.from(bookElements, (book) => {\n  // create one object per iteration, can only return one object at a time.\n  return {\n    title: book.querySelector('h3 a')?.getAttribute('title')?.trim() || \"\",\n    price: book.querySelector('.price_color')?.textContent.trim() || \"\",\n    stock: book.querySelector('.instock.availability')?.textContent.trim() || \"\"\n  };\n});\n\nconsole.log(books);\n\n\n",
-      "status": "",
-      "output": "",
-      "type": "code"
-    },
-    {
-      "code": "/*Further more the above code can be simplified as */\n\nconst books = Array.from(\n  document.querySelectorAll('.product_pod'),\n  book => ({\n    title: book.querySelector('h3 a')?.getAttribute('title')?.trim() || \"\",\n    price: book.querySelector('.price_color')?.textContent.trim() || \"\",\n    stock: book.querySelector('.instock.availability')?.textContent.trim() || \"\"\n  })\n);\nconsole.log(books);",
-      "status": "",
-      "output": "",
-      "type": "code"
-    },
-    {
-      "code": "// third way, use array.forEach() + arrow function.\n\nconst bookElements = document.querySelectorAll('.product_pod');\nlet books = [];\n\n// use array.forEach() method\nbookElements.forEach((book) => {\n  // initialize one_book at evey iteration.\n  one_book = {};\n  one_book['title'] = book.querySelector('h3 a')?.getAttribute('title')?.trim() || \"\";\n  one_book['price'] = book.querySelector('.price_color')?.textContent.trim() || \"\";\n  one_book['stock'] = book.querySelector('.instock.availability')?.textContent.trim() || \"\";\n  \n  books.push(one_book);\n});\n\nconsole.log(books);",
-      "status": "",
-      "output": "",
-      "type": "code"
-    },
-    {
-      "code": "",
+      "code": "### ",
       "status": "",
       "output": "",
       "type": "code"
@@ -274,6 +244,72 @@
     },
     {
       "code": "// Using an arrow function as the map function to\n// manipulate the elements\nArray.from([1, 2, 3], (x) => x + x);\n// [2, 4, 6]\n\n// Generate a sequence of numbers\n// Since the array is initialized with `undefined` on each position,\n// the value of `v` below will be `undefined`\nArray.from({ length: 5 }, (v, i) => i);\n// [0, 1, 2, 3, 4]\n",
+      "status": "",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "## 5.2 JSON\n\nwebsite to convert json to csv: [convertcsv](https://www.convertcsv.com/json-to-csv.htm)",
+      "status": "",
+      "output": "<h2>5.2 JSON</h2>\n<p>website to convert json to csv: <a href=\"https://www.convertcsv.com/json-to-csv.htm\">convertcsv</a></p>\n",
+      "type": "html"
+    },
+    {
+      "code": "JSON is a string whose format very much resembles JavaScript object literal format. The following is a valid JSON string representing an object.\nJSON text basically looks like a JavaScript object inside a string. for example:\n```\n\ndata = [\n  {\n    \"name\": \"Molecule Man\",\n    \"age\": 29,\n    \"secretIdentity\": \"Dan Jukes\",\n    \"powers\": [\"Radiation resistance\", \"Turning tiny\", \"Radiation blast\"]\n  },\n  {\n    \"name\": \"Madame Uppercut\",\n    \"age\": 39,\n    \"secretIdentity\": \"Jane Wilson\",\n    \"powers\": [\n      \"Million tonne punch\",\n      \"Damage resistance\",\n      \"Superhuman reflexes\"\n    ]\n  }\n];\n\n```",
+      "status": "",
+      "output": "<p>JSON is a string whose format very much resembles JavaScript object literal format. The following is a valid JSON string representing an object.\nJSON text basically looks like a JavaScript object inside a string. for example:</p>\n<pre><code>[\n  {\n    \"name\": \"Molecule Man\",\n    \"age\": 29,\n    \"secretIdentity\": \"Dan Jukes\",\n    \"powers\": [\"Radiation resistance\", \"Turning tiny\", \"Radiation blast\"]\n  },\n  {\n    \"name\": \"Madame Uppercut\",\n    \"age\": 39,\n    \"secretIdentity\": \"Jane Wilson\",\n    \"powers\": [\n      \"Million tonne punch\",\n      \"Damage resistance\",\n      \"Superhuman reflexes\"\n    ]\n  }\n]\n</code></pre>\n",
+      "type": "html"
+    },
+    {
+      "code": "# Chapter 6 Real World Project",
+      "status": "",
+      "output": "<h1>Chapter 6 Real World Project</h1>\n",
+      "type": "html"
+    },
+    {
+      "code": "## Project 1: scraping a real website[books.toscrape](http://books.toscrape.com/)",
+      "status": "",
+      "output": "<h2>Project 1: scraping a real website<a href=\"http://books.toscrape.com/\">books.toscrape</a></h2>\n",
+      "type": "html"
+    },
+    {
+      "code": "// First way to scrape the website, use for...each\nconst bookElements = document.querySelectorAll('.product_pod');\nbooks = [];\none_book = {};\nfor (let book of bookElements) {\n  const title = book.querySelector('h3 a').getAttribute('title').trim();\n  const price = book.querySelector('.price_color')?.textContent.trim() || \"\";\n  const stock = book.querySelector('.instock.availability')?.textContent.trim() || \"\";\n  one_book['title'] = title;\n  one_book['price'] = price;\n  one_book['stock'] = stock;\n  books.push(one_book);\n\n}\nconsole.log(books);\n",
+      "status": "",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "// Second way to scrape the website, use Array.from method + arrow function\n\nconst bookElements = document.querySelectorAll('.product_pod');\n\n// Use Array.from method\nconst books = Array.from(bookElements, (book) => {\n  // create one object per iteration, can only return one object at a time.\n  return {\n    title: book.querySelector('h3 a')?.getAttribute('title')?.trim() || \"\",\n    price: book.querySelector('.price_color')?.textContent.trim() || \"\",\n    stock: book.querySelector('.instock.availability')?.textContent.trim() || \"\"\n  };\n});\n\nconsole.log(books);\n\n\n",
+      "status": "",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "the function below can be used to convert any JSON object to csv, and trigger download.\n```\nfunction downloadCSV(data, filename = \"data.csv\") {\n  if (!data || !data.length) {\n    console.error(\"No data to download.\");\n    return;\n  }\n\n  // Create CSV header row from object keys\n  const header = Object.keys(data[0]).join(\",\");\n\n  // Map each object to a CSV row, escaping quotes\n  const rows = data.map(row =>\n    Object.values(row)\n      .map(value => `\"${String(value).replace(/\"/g, '\"\"')}\"`)\n      .join(\",\")\n  );\n\n  // Combine header and rows with line breaks\n  const csvContent = [header, ...rows].join(\"\\n\");\n\n  // Create a Blob (file object) from the CSV string\n  const blob = new Blob([csvContent], { type: \"text/csv\" });\n\n  // Create a temporary link element for download\n  const url = URL.createObjectURL(blob);\n  const a = document.createElement(\"a\");\n  a.href = url;\n  a.download = filename;\n  document.body.appendChild(a); // Append to DOM (needed for Firefox)\n  a.click(); // Trigger download\n  document.body.removeChild(a); // Clean up\n  URL.revokeObjectURL(url); // Free memory\n}\n\n// Step 3: Call the function to download the scraped books\ndownloadCSV(books, \"books.csv\");\n```",
+      "status": "",
+      "output": "",
+      "type": "html"
+    },
+    {
+      "code": "/*Further more the above code can be simplified as \nbut when scraping other websites, code in books object need to be rewritten.\n\n*/\n\nconst books = Array.from(\n  document.querySelectorAll('.product_pod'),\n  book => ({\n    title: book.querySelector('h3 a')?.getAttribute('title')?.trim() || \"\",\n    price: book.querySelector('.price_color')?.textContent.trim() || \"\",\n    stock: book.querySelector('.instock.availability')?.textContent.trim() || \"\"\n  })\n);\nconsole.log(books);\n\n// following code is a universal function to download a JSON string to csv file and download it.\n// Step 2: Define a function to convert JSON to CSV and download it\nfunction downloadCSV(data, filename = \"data.csv\") {\n  if (!data || !data.length) {\n    console.error(\"No data to download.\");\n    return;\n  }\n\n  // Create CSV header row from object keys\n  const header = Object.keys(data[0]).join(\",\");\n\n  // Map each object to a CSV row, escaping quotes\n  const rows = data.map(row =>\n    Object.values(row)\n      .map(value => `\"${String(value).replace(/\"/g, '\"\"')}\"`)\n      .join(\",\")\n  );\n\n  // Combine header and rows with line breaks\n  const csvContent = [header, ...rows].join(\"\\n\");\n\n  // Create a Blob (file object) from the CSV string\n  const blob = new Blob([csvContent], { type: \"text/csv\" });\n\n  // Create a temporary link element for download\n  const url = URL.createObjectURL(blob);\n  const a = document.createElement(\"a\");\n  a.href = url;\n  a.download = filename;\n  document.body.appendChild(a); // Append to DOM (needed for Firefox)\n  a.click(); // Trigger download\n  document.body.removeChild(a); // Clean up\n  URL.revokeObjectURL(url); // Free memory\n}\n\n// Step 3: Call the function to download the scraped books\ndownloadCSV(books, \"books.csv\");",
+      "status": "",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "// third way, use array.forEach() + arrow function.\n\nconst bookElements = document.querySelectorAll('.product_pod');\nlet books = [];\n\n// use array.forEach() method\nbookElements.forEach((book) => {\n  // initialize one_book at evey iteration.\n  one_book = {};\n  one_book['title'] = book.querySelector('h3 a')?.getAttribute('title')?.trim() || \"\";\n  one_book['price'] = book.querySelector('.price_color')?.textContent.trim() || \"\";\n  one_book['stock'] = book.querySelector('.instock.availability')?.textContent.trim() || \"\";\n  \n  books.push(one_book);\n});\n\nconsole.log(books);",
+      "status": "",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "## Project 2: Scraping Qichacha.com company shareholder data\n",
+      "status": "",
+      "output": "<h2>Project 2: Scraping Qichacha.com company shareholder data</h2>\n",
+      "type": "html"
+    },
+    {
+      "code": "// this function only applies to qichacha.com\nfunction extractShareholders() {\n  /* for every row return a object.  */ \n  const shareholders = Array.from(\n\tdocument.querySelectorAll('.app-tree-table .ntable tr'), // locate the only table that has shareholder information.\n\t(row, index) => {\n\t  // \n\t  one_holder = {};\n\t  const fullNameElem = row.querySelector('td:nth-child(2) a');\n\t  // shareholder ratio\n\t  const stockRatioElem = row.querySelector('td:nth-child(3) .has-stock span:first-child');\n\t  // date \n\t  const dateElem = row.querySelector('td:nth-last-child(2)');\n\t  // simplied company name, or alias\n\t  const simpleNameElem = row.querySelector('td:nth-last-child(1) a');\n\n\t  // return a object(similar to dictionary in Python)\n\t  return {\n\t\tindex: index,\n\t\tfullName: fullNameElem ? fullNameElem.textContent.trim() : '',\n\t\tstockRatio: stockRatioElem ? stockRatioElem.textContent.trim() : '',\n\t\tdate: dateElem ? dateElem.textContent.trim() : '',\n\t\tsimpleName: simpleNameElem ? simpleNameElem.textContent.trim() : '',\n\t  };\n  \n  });\n\n    // filter out rows with no value.\n    const cleaned_shareholders = shareholders.filter(item => item.fullName && item.fullName.trim() !== \"\");\n\n    return cleaned_shareholders;\n}\n\n// Step 2: Define a function to convert JSON to CSV and download it\nfunction downloadCSV(data, filename = \"data.csv\") {\n  if (!data || !data.length) {\n    console.error(\"No data to download.\");\n    return;\n  }\n\n  // Create CSV header row from object keys\n  const header = Object.keys(data[0]).join(\",\");\n\n  // Map each object to a CSV row, escaping quotes\n  const rows = data.map(row =>\n    Object.values(row)\n      .map(value => `\"${String(value).replace(/\"/g, '\"\"')}\"`)\n      .join(\",\")\n  );\n\n  // Combine header and rows with line breaks\n  const csvContent = [header, ...rows].join(\"\\n\");\n\n  // Create a Blob (file object) from the CSV string\n  const blob = new Blob([csvContent], { type: \"text/csv\" });\n\n  // Create a temporary link element for download\n  const url = URL.createObjectURL(blob);\n  const a = document.createElement(\"a\");\n  a.href = url;\n  a.download = filename;\n  document.body.appendChild(a); // Append to DOM (needed for Firefox)\n  a.click(); // Trigger download\n  document.body.removeChild(a); // Clean up\n  URL.revokeObjectURL(url); // Free memory\n}\n\ndata = extractShareholders();\ndownloadCSV(data, \"shareholder.csv\");\n",
       "status": "",
       "output": "",
       "type": "code"

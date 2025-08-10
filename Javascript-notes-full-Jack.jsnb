@@ -75,7 +75,7 @@
       "type": "html"
     },
     {
-      "code": "let x = 10;\nlet y = 15;\nlet a = 10;\nlet b = \"10\";\nscrib.show(\"Is x greater than y:\", x > y);\nscrib.show(\"IS x less than y:\", x < y);\nscrib.show(\"Is x equal to y:\", x==y); // better use strict equal\nscrib.show(\"Is x strict equal to y:\", x===y);\nscrib.show(\"Is a equal to b:\", a==b); // å¦æä¸ç¨ strict equal, a å b ä¸ä¸ªæ¯ Numberï¼ä¸ä¸ªæ¯ stringï¼ä¹ä¼ç¸ç­\nscrib.show(\"Is a strict equal to b:\", a===b);",
+      "code": "let x = 10;\nlet y = 15;\nlet a = 10;\nlet b = \"10\";\nscrib.show(\"Is x greater than y:\", x > y);\nscrib.show(\"IS x less than y:\", x < y);\nscrib.show(\"Is x equal to y:\", x==y); // better use strict equal\nscrib.show(\"Is x strict equal to y:\", x===y);\nscrib.show(\"Is a equal to b:\", a==b); // Ã¥Â¦ÂÃ¦ÂÂÃ¤Â¸ÂÃ§ÂÂ¨ strict equal, a Ã¥ÂÂ b Ã¤Â¸ÂÃ¤Â¸ÂªÃ¦ÂÂ¯ NumberÃ¯Â¼ÂÃ¤Â¸ÂÃ¤Â¸ÂªÃ¦ÂÂ¯ stringÃ¯Â¼ÂÃ¤Â¹ÂÃ¤Â¼ÂÃ§ÂÂ¸Ã§Â­Â\nscrib.show(\"Is a strict equal to b:\", a===b);",
       "status": "[12]<br><span style=\"font-size:8px\">7ms<span></span></span>",
       "output": "Is x greater than y: false <br>IS x less than y: true <br>Is x equal to y: false <br>Is x strict equal to y: false <br>Is a equal to b: true <br>Is a strict equal to b: false <br>",
       "type": "code"
@@ -93,9 +93,9 @@
       "type": "code"
     },
     {
-      "code": "//>md\n## 1.5 let and const\n\n`let` is block-scoped, meaning itâs only accessible within the { ... } block, statement, or expression where it was declared.\n\n`const` is also block-scoped.\n\n`var` is function-scoped â meaning itâs accessible throughout the entire function in which itâs declared, or globally if declared outside any function.\n\n> Caution: use `let` to define variables whenever possible.",
+      "code": "//>md\n## 1.5 let and const\n\n`let` is block-scoped, meaning itÃ¢ÂÂs only accessible within the { ... } block, statement, or expression where it was declared.\n\n`const` is also block-scoped.\n\n`var` is function-scoped Ã¢ÂÂ meaning itÃ¢ÂÂs accessible throughout the entire function in which itÃ¢ÂÂs declared, or globally if declared outside any function.\n\n> Caution: use `let` to define variables whenever possible.",
       "status": "",
-      "output": "<h2>1.5 let and const</h2>\n<p><code>let</code> is block-scoped, meaning itâs only accessible within the { ... } block, statement, or expression where it was declared.</p>\n<p><code>const</code> is also block-scoped.</p>\n<p><code>var</code> is function-scoped â meaning itâs accessible throughout the entire function in which itâs declared, or globally if declared outside any function.</p>\n<blockquote>\n<p>Caution: use <code>let</code> to define variables whenever possible.</p>\n</blockquote>\n",
+      "output": "<h2>1.5 let and const</h2>\n<p><code>let</code> is block-scoped, meaning itÃ¢ÂÂs only accessible within the { ... } block, statement, or expression where it was declared.</p>\n<p><code>const</code> is also block-scoped.</p>\n<p><code>var</code> is function-scoped Ã¢ÂÂ meaning itÃ¢ÂÂs accessible throughout the entire function in which itÃ¢ÂÂs declared, or globally if declared outside any function.</p>\n<blockquote>\n<p>Caution: use <code>let</code> to define variables whenever possible.</p>\n</blockquote>\n",
       "type": "html"
     },
     {
@@ -141,6 +141,18 @@
       "type": "code"
     },
     {
+      "code": "### 2.1.2 Ternary Operator: ?...:\n\nTernary operator is a shortcut to if{} and else{} statements. syntax:\n```\ncondition ? codeIfTrue : codeIfFalse;\n```\n",
+      "status": "",
+      "output": "<h3>2.1.2 Ternary Operator: ?...:</h3>\n<p>Ternary operator is a shortcut to if{} and else{} statements. syntax:</p>\n<pre><code>condition ? codeIfTrue : codeIfFalse;\n</code></pre>\n",
+      "type": "html"
+    },
+    {
+      "code": "let temp = 35;\nlet message = temp > 30 ? \"It's a hot day.\" : \"it's not hot.\"\nscrib.show(message);\n\nlet isStudent = true;\nlet message2 = isStudent ? \"You are a student\" : \"You are NOT a student.\"\nscrib.show(message2)",
+      "status": "[13]<br><span style=\"font-size:8px\">1ms<span></span></span>",
+      "output": "It's a hot day. <br>You are a student <br>",
+      "type": "code"
+    },
+    {
       "code": "\n## 2.2 for statement",
       "status": "",
       "output": "<h2>2.2 for statement</h2>\n",
@@ -159,7 +171,7 @@
       "type": "html"
     },
     {
-      "code": "### ",
+      "code": "",
       "status": "",
       "output": "",
       "type": "code"
@@ -183,15 +195,15 @@
       "type": "html"
     },
     {
-      "code": "## 3.1 Arrow function \n参考：[MDN-docs-Arrow Fuction expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)\n\n```javascript\n() => expression\n\nparam => expression\n\n(param) => expression\n\n(param1, paramN) => expression\n\n() => {\n  statements\n}\n\nparam => {\n  statements\n}\n\n(param1, paramN) => {\n  statements\n}\n```\n",
+      "code": "## 3.1 Arrow function \nfor more information, refer to docs [MDN-docs-Arrow Fuction expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)\n\n```javascript\n() => expression\n\nparam => expression\n\n(param) => expression\n\n(param1, paramN) => expression\n\n() => {\n  statements\n}\n\nparam => {\n  statements\n}\n\n(param1, paramN) => {\n  statements\n}\n```\n",
       "status": "",
-      "output": "<h2>3.1 Arrow function</h2>\n<p>参考：<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions\">MDN-docs-Arrow Fuction expressions</a></p>\n<pre><code class=\"language-javascript\">() =&gt; expression\n\n<p>param =&gt; expression</p>\n<p>(param) =&gt; expression</p>\n<p>(param1, paramN) =&gt; expression</p>\n<p>() =&gt; {\n  statements\n}</p>\n<p>param =&gt; {\n  statements\n}</p>\n</code><p><code class=\"language-javascript\">(param1, paramN) =&gt; {\n  statements\n}\n</code></p></pre><p></p>\n",
+      "output": "<h2>3.1 Arrow function</h2>\n<p>for more information, refer to docs <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions\">MDN-docs-Arrow Fuction expressions</a></p>\n<pre><code class=\"language-javascript\">() =&gt; expression\n\n<p>param =&gt; expression</p>\n<p>(param) =&gt; expression</p>\n<p>(param1, paramN) =&gt; expression</p>\n<p>() =&gt; {\n  statements\n}</p>\n<p>param =&gt; {\n  statements\n}</p>\n</code><p><code class=\"language-javascript\">(param1, paramN) =&gt; {\n  statements\n}\n</code></p></pre><p></p>\n",
       "type": "html"
     },
     {
-      "code": "\nIn functional programming, array functions (also known as array methods or higher-order functions) are functions that operate on arrays or collections of data and produce a new array or a transformed result based on the input array. These functions are designed to support a more declarative and functional style of programming, where you can perform various operations on arrays without explicitly using loops or mutating the original array.\nSome commonly used array functions in functional programming include:\n<pre>\n1. `map`: Transforms each element of an array by applying a given function and returns a new array with the transformed elements.\n\n2. `filter`: Selects elements from an array based on a given condition and returns a new array with the selected elements.\n\n3. `reduce`: Applies a given function to reduce an array into a single value. It iterates over each element of the array and accumulates the result.\n\n4. `forEach`: Executes a provided function on each element of an array, but it does not produce a new array.\n\n5. `some` / `every`: Checks if at least one element or every element in an array satisfies a given condition, respectively.\n</pre>\n> 类似于 Python 的`any`和`all`函数\n\nThese array functions, among others, enable functional programming paradigms by providing higher-order functions that abstract away the need for explicit iteration and mutation of arrays. They encourage immutability and make code more concise, readable, and easier to reason about.\n\n更多 Array methods 可以参考[MDN-Array methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)",
+      "code": "\nIn functional programming, array functions (also known as array methods or higher-order functions) are functions that operate on arrays or collections of data and produce a new array or a transformed result based on the input array. These functions are designed to support a more declarative and functional style of programming, where you can perform various operations on arrays without explicitly using loops or mutating the original array.\nSome commonly used array functions in functional programming include:\n<pre>\n1. `map`: Transforms each element of an array by applying a given function and returns a new array with the transformed elements.\n\n2. `filter`: Selects elements from an array based on a given condition and returns a new array with the selected elements.\n\n3. `reduce`: Applies a given function to reduce an array into a single value. It iterates over each element of the array and accumulates the result.\n\n4. `forEach`: Executes a provided function on each element of an array, but it does not produce a new array.\n\n5. `some` / `every`: Checks if at least one element or every element in an array satisfies a given condition, respectively.\n</pre>\n> similar to `any` and `all` in Python programming language.\n\nThese array functions, among others, enable functional programming paradigms by providing higher-order functions that abstract away the need for explicit iteration and mutation of arrays. They encourage immutability and make code more concise, readable, and easier to reason about.\n\nfor more Array methods refer to [MDN-Array methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)",
       "status": "",
-      "output": "<p>In functional programming, array functions (also known as array methods or higher-order functions) are functions that operate on arrays or collections of data and produce a new array or a transformed result based on the input array. These functions are designed to support a more declarative and functional style of programming, where you can perform various operations on arrays without explicitly using loops or mutating the original array.\nSome commonly used array functions in functional programming include:</p>\n<pre>1. `map`: Transforms each element of an array by applying a given function and returns a new array with the transformed elements.\n\n<ol start=\"2\">\n<li><p><code>filter</code>: Selects elements from an array based on a given condition and returns a new array with the selected elements.</p>\n</li>\n<li><p><code>reduce</code>: Applies a given function to reduce an array into a single value. It iterates over each element of the array and accumulates the result.</p>\n</li>\n<li><p><code>forEach</code>: Executes a provided function on each element of an array, but it does not produce a new array.</p>\n</li>\n<li><p><code>some</code> / <code>every</code>: Checks if at least one element or every element in an array satisfies a given condition, respectively.\n</p></li></ol></pre><p></p>\n<blockquote>\n<p>类似于 Python 的<code>any</code>和<code>all</code>函数</p>\n</blockquote>\n<p>These array functions, among others, enable functional programming paradigms by providing higher-order functions that abstract away the need for explicit iteration and mutation of arrays. They encourage immutability and make code more concise, readable, and easier to reason about.</p>\n<p>更多 Array methods 可以参考<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array\">MDN-Array methods</a></p>\n\n",
+      "output": "<p>In functional programming, array functions (also known as array methods or higher-order functions) are functions that operate on arrays or collections of data and produce a new array or a transformed result based on the input array. These functions are designed to support a more declarative and functional style of programming, where you can perform various operations on arrays without explicitly using loops or mutating the original array.\nSome commonly used array functions in functional programming include:</p>\n<pre>1. `map`: Transforms each element of an array by applying a given function and returns a new array with the transformed elements.\n\n<ol start=\"2\">\n<li><p><code>filter</code>: Selects elements from an array based on a given condition and returns a new array with the selected elements.</p>\n</li>\n<li><p><code>reduce</code>: Applies a given function to reduce an array into a single value. It iterates over each element of the array and accumulates the result.</p>\n</li>\n<li><p><code>forEach</code>: Executes a provided function on each element of an array, but it does not produce a new array.</p>\n</li>\n<li><p><code>some</code> / <code>every</code>: Checks if at least one element or every element in an array satisfies a given condition, respectively.\n</p></li></ol></pre><p></p>\n<blockquote>\n<p>similar to <code>any</code> and <code>all</code> in Python programming language.</p>\n</blockquote>\n<p>These array functions, among others, enable functional programming paradigms by providing higher-order functions that abstract away the need for explicit iteration and mutation of arrays. They encourage immutability and make code more concise, readable, and easier to reason about.</p>\n<p>for more Array methods refer to <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array\">MDN-Array methods</a></p>\n\n",
       "type": "html"
     },
     {
@@ -216,6 +228,24 @@
       "code": "//push\nconst copyedArray = [];\nconst numbers = [1, 2, 3, 4,\"5\"];\nnumbers.forEach((element) => copyedArray.push(element));\ndisplay(copyedArray);",
       "status": "",
       "output": "",
+      "type": "code"
+    },
+    {
+      "code": "## 3.2 regular function + foreach",
+      "status": "",
+      "output": "<h2>3.2 regular function + foreach</h2>\n",
+      "type": "html"
+    },
+    {
+      "code": "let numbers = [1, 2, 3, 4, 5];\n\n// this will mutate the original numbers\nfunction double(element, index, array){\n  array[index] = element * 2;\n}\n\n// perform the same action as double(), but return a new array.\nfunction double2(array) {\n  return array.map(element => element * 2);\n}\n\n// also equal to double2(), but return a new array.\nfunction double3(array) {\n  const result = [];\n  for (let element of array) {result.push(element * 2)}\n  return result;\n}\n\nnumbers.forEach(double); // can Pass a function as variable, for example double()\nscrib.show(numbers);\nscrib.show(double2(numbers));\nscrib.show(double3(numbers));",
+      "status": "[7]<br><span style=\"font-size:8px\">3ms<span></span></span>",
+      "output": "[\n  2,\n  4,\n  6,\n  8,\n  10\n] <br>[\n  4,\n  8,\n  12,\n  16,\n  20\n] <br>[\n  4,\n  8,\n  12,\n  16,\n  20\n] <br>",
+      "type": "code"
+    },
+    {
+      "code": "// example2: deal with string \nlet fruits = ['apple', 'orange', 'banana', 'coconut'];\n\nfruits.forEach(capitalize2);\n\nfunction capitalize(fruit, index, array) {\n  array[index] = fruit.toUpperCase();\n}\n\nfunction capitalize2(fruit, index, array) {\n  array[index] = fruit.charAt(0).toUpperCase() + fruit.slice(1).toLowerCase();\n}\n\nscrib.show(fruits);\n\n",
+      "status": "[11]<br><span style=\"font-size:8px\">1ms<span></span></span>",
+      "output": "[\n  \"Apple\",\n  \"Orange\",\n  \"Banana\",\n  \"Coconut\"\n] <br>",
       "type": "code"
     },
     {
@@ -249,7 +279,31 @@
       "type": "code"
     },
     {
-      "code": "## 5.2 JSON\n\nwebsite to convert json to csv: [convertcsv](https://www.convertcsv.com/json-to-csv.htm)",
+      "code": "### 5.1.2 Spread operator \n\nfunction: unpack the element",
+      "status": "",
+      "output": "",
+      "type": "html"
+    },
+    {
+      "code": "numbers = [1, 2, 3]\nlet maximum = Math.max(...numbers);\nscrib.show(maximum);",
+      "status": "[16]<br><span style=\"font-size:8px\">2ms<span></span></span>",
+      "output": "3 <br>",
+      "type": "code"
+    },
+    {
+      "code": "## 5.2 Object",
+      "status": "",
+      "output": "<h2>5.2 Object</h2>\n",
+      "type": "html"
+    },
+    {
+      "code": "",
+      "status": "",
+      "output": "",
+      "type": "code"
+    },
+    {
+      "code": "## 5.3 JSON\n\nwebsite to convert json to csv: [convertcsv](https://www.convertcsv.com/json-to-csv.htm)",
       "status": "",
       "output": "<h2>5.2 JSON</h2>\n<p>website to convert json to csv: <a href=\"https://www.convertcsv.com/json-to-csv.htm\">convertcsv</a></p>\n",
       "type": "html"

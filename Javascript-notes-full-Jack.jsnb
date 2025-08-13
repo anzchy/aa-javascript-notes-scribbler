@@ -69,13 +69,25 @@
       "type": "code"
     },
     {
+      "code": "### 1.2.1 String \n\nJavascript 中 string method，Python 中取 string 譬如 \"hello jack\"，前几个字符是可以用 [0:3]（容易误写为[0, 3]，需要特别注意），但是 JS 中只能用 string method.\n```\nname = \"hello jack\"\nname[0:3]\n```\nJS 中必须用 slice method，不能用varName[0:3]访问。\n```\nconst name = \"hello jack\";\nconsole.log(name.slice(0, 3));\n```",
+      "status": "",
+      "output": "<h3>1.2.1 String</h3>\n<p>Javascript 中 string method，Python 中取 string 譬如 \"hello jack\"，前几个字符是可以用 [0:3]（容易误写为[0, 3]，需要特别注意），但是 JS 中只能用 string method.</p>\n<pre><code>name = \"hello jack\"\nname[0:3]\n</code></pre>\n<p>JS 中必须用 slice method，不能用varName[0:3]访问。</p>\n<pre><code>const name = \"hello jack\";\nconsole.log(name.slice(0, 3));\n</code></pre>\n",
+      "type": "html"
+    },
+    {
+      "code": "const name = \"hello jack\";\nscrib.show(name.slice(0, 3));",
+      "status": "[2]<br><span style=\"font-size:8px\">3ms<span></span></span>",
+      "output": "hel <br>",
+      "type": "code"
+    },
+    {
       "code": "//>md\n## 1.3 Comparison Operations\n\nfor more information about operations, refer to [mdn doc](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)\n\n",
       "status": "",
       "output": "<h2>1.3 Comparison Operations</h2>\n<p>for more information about operations, refer to <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators\">mdn doc</a></p>\n",
       "type": "html"
     },
     {
-      "code": "let x = 10;\nlet y = 15;\nlet a = 10;\nlet b = \"10\";\nscrib.show(\"Is x greater than y:\", x > y);\nscrib.show(\"IS x less than y:\", x < y);\nscrib.show(\"Is x equal to y:\", x==y); // better use strict equal\nscrib.show(\"Is x strict equal to y:\", x===y);\nscrib.show(\"Is a equal to b:\", a==b); // Ã¥Â¦ÂÃ¦ÂÂÃ¤Â¸ÂÃ§ÂÂ¨ strict equal, a Ã¥ÂÂ b Ã¤Â¸ÂÃ¤Â¸ÂªÃ¦ÂÂ¯ NumberÃ¯Â¼ÂÃ¤Â¸ÂÃ¤Â¸ÂªÃ¦ÂÂ¯ stringÃ¯Â¼ÂÃ¤Â¹ÂÃ¤Â¼ÂÃ§ÂÂ¸Ã§Â­Â\nscrib.show(\"Is a strict equal to b:\", a===b);",
+      "code": "let x = 10;\nlet y = 15;\nlet a = 10;\nlet b = \"10\";\nscrib.show(\"Is x greater than y:\", x > y);\nscrib.show(\"IS x less than y:\", x < y);\nscrib.show(\"Is x equal to y:\", x==y); // better use strict equal\nscrib.show(\"Is x strict equal to y:\", x===y);\nscrib.show(\"Is a equal to b:\", a==b); // use strict equal operator whenever possible.\nscrib.show(\"Is a strict equal to b:\", a===b);",
       "status": "[12]<br><span style=\"font-size:8px\">7ms<span></span></span>",
       "output": "Is x greater than y: false <br>IS x less than y: true <br>Is x equal to y: false <br>Is x strict equal to y: false <br>Is a equal to b: true <br>Is a strict equal to b: false <br>",
       "type": "code"
@@ -228,6 +240,12 @@
       "code": "//push\nconst copyedArray = [];\nconst numbers = [1, 2, 3, 4,\"5\"];\nnumbers.forEach((element) => copyedArray.push(element));\ndisplay(copyedArray);",
       "status": "",
       "output": "",
+      "type": "code"
+    },
+    {
+      "code": "// example from BroCode\nconst numbers = [1, 2, 3, 4, 5, 6];\n\nconst squares = numbers.map((element) => Math.pow(element, 2));\nconst cubes = numbers.map((element) => Math.pow(element, 3));\nconst evenNums = numbers.filter((element) => element % 2 ===0);\nconst total = numbers.reduce((accum, element) => accum + element);\nscrib.show(squares);\nscrib.show(cubes);\nscrib.show(evenNums);\nscrib.show(total);",
+      "status": "[6]<br><span style=\"font-size:8px\">4ms<span></span></span>",
+      "output": "[\n  1,\n  4,\n  9,\n  16,\n  25,\n  36\n] <br>[\n  1,\n  8,\n  27,\n  64,\n  125,\n  216\n] <br>[\n  2,\n  4,\n  6\n] <br>21 <br>",
       "type": "code"
     },
     {

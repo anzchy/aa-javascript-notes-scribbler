@@ -69,7 +69,7 @@
       "type": "code"
     },
     {
-      "code": "### 1.2.1 String \n\nJavascript 中 string method，Python 中取 string 譬如 \"hello jack\"，前几个字符是可以用 [0:3]（容易误写为[0, 3]，需要特别注意），但是 JS 中只能用 string method.\n```\nname = \"hello jack\"\nname[0:3]\n```\nJS 中必须用 slice method，不能用varName[0:3]访问。\n```\nconst name = \"hello jack\";\nconsole.log(name.slice(0, 3));\n```",
+      "code": "### 1.2.1 String \n\nIn JavaScript string methods and Python string slicing, for example, `\"hello jack\"`, in Python, the first few characters can be obtained using `[0:3]` (which can easily be mistyped as `[0, 3]`, so be careful). However, in JavaScript, you can only use string methods.\n\n```\nname = \"hello jack\"\nname[0:3]\n```\n\nIn JavaScript, you must use the `slice` method, and cannot access with `varName[0:3]`.\n\n```\nconst name = \"hello jack\";\nconsole.log(name.slice(0, 3));\n```\n",
       "status": "",
       "output": "<h3>1.2.1 String</h3>\n<p>Javascript 中 string method，Python 中取 string 譬如 \"hello jack\"，前几个字符是可以用 [0:3]（容易误写为[0, 3]，需要特别注意），但是 JS 中只能用 string method.</p>\n<pre><code>name = \"hello jack\"\nname[0:3]\n</code></pre>\n<p>JS 中必须用 slice method，不能用varName[0:3]访问。</p>\n<pre><code>const name = \"hello jack\";\nconsole.log(name.slice(0, 3));\n</code></pre>\n",
       "type": "html"

@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "name": "Test of using Chinese words in scribbler",
+    "language_info": {
+      "name": "JavaScipt",
+      "version": "8.0"
+    }
+  },
+  "jsnbversion": "v0.1",
+  "cells": [
+    {
+      "code": "// 这是一段中文表述,Hello world\nscrib.show(\"Hello 勇\");",
+      "status": "[1]<br><span style=\"font-size:8px\">3ms<span></span></span>",
+      "output": "Hello 勇 <br>",
+      "type": "code"
+    },
+    {
+      "code": "// JS 中的function 范例\nname = \"张三\"\nfunction sayhello(name) {\n  scrib.show(\"Hello \"+ name); // 注意这里需要加上;\n}\nsayhello(name);",
+      "status": "[2]<br><span style=\"font-size:8px\">2ms<span></span></span>",
+      "output": "Hello张三 <br>",
+      "type": "code"
+    },
+    {
+      "code": "## python 和 JavaScript 的异同：\nPython 中不需要;，靠`space`来 indent;\nJavascript 中需要靠{}来表示 indent.",
+      "status": "",
+      "output": "<h2>python 和 JavaScript 的异同：</h2>\n<p>Python 中不需要;，靠<code>space</code>来 indent;\nJavascript 中需要靠{}来表示 indent.</p>\n",
+      "type": "html"
+    }
+  ],
+  "source": "https://github.com/gopi-suvanam/scribbler",
+  "run_on_load": false
+}
